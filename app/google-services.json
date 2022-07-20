@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "277244392462",
+    "project_id": "whatever-weather",
+    "storage_bucket": "whatever-weather.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277244392462:android:76252198047786c192785f",
+        "android_client_info": {
+          "package_name": "com.keremktas.whateverweather"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277244392462-l7ibha86fgdad6riksrlgb8ms5aii83g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keremktas.whateverweather",
+            "certificate_hash": "8fbc76c885e44e2cc014c1b7565783477498a25a"
+          }
+        },
+        {
+          "client_id": "277244392462-ret75i1rmb84vhesdq3neutjhp56jo5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdcgBNt5L8nRqo27XjlREdVDDnHM63Izw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277244392462-ret75i1rmb84vhesdq3neutjhp56jo5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
