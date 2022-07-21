@@ -1,7 +1,8 @@
-package com.keremktas.whateverweather
+package com.keremktas.whateverweather.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.keremktas.whateverweather.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

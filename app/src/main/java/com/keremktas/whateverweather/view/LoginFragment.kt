@@ -1,4 +1,4 @@
-package com.keremktas.whateverweather
+package com.keremktas.whateverweather.view
 
 
 import android.app.PendingIntent
@@ -24,13 +24,13 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.keremktas.whateverweather.R
 import com.keremktas.whateverweather.databinding.FragmentLoginBinding
 
 
 class LoginFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
-
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding
         get() = _binding!!
@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
 
         // Button listeners
         binding.signInButton.setOnClickListener { signIn() }
-        binding.signOutButton.setOnClickListener { signOut() }
+        binding.signOutButton.setOnClickListener {signOut()}
 
         // Configure Google Sign In
         signInClient = Identity.getSignInClient(requireContext())
@@ -72,6 +72,7 @@ class LoginFragment : Fragment() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
+
         updateUI(currentUser)
     }
 
@@ -180,9 +181,10 @@ class LoginFragment : Fragment() {
         if (user != null) {
             binding.status.text = getString(R.string.google_status_fmt, user.email)
             binding.detail.text = getString(R.string.firebase_status_fmt, user.uid)
-
+            Log.e("****",auth.currentUser!!.photoUrl.toString())
             binding.signInButton.visibility = View.GONE
             binding.signOutButton.visibility = View.VISIBLE
+
         } else {
             binding.status.setText(R.string.signed_out)
             binding.detail.text = null
